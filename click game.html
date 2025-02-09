@@ -1,0 +1,27 @@
+<h1>click game</h1>
+<button onclick="btn()" class="btn1">click</button>
+<button onclick="save()">save</button>
+<script>
+    var a = 0;
+    function btn(){
+        a += 1;
+        alert(a);
+    }
+    function save(){ 
+        let text = a
+        let link = document.createElement("a");
+        link.href = "data:text/plain;charset=utf-8," + encodeURIComponent(text);
+        link.download = "data.txt";
+        link.click();
+    }
+</script>
+<style>
+    h1 {
+        color: aqua;
+    }
+    .btn1{
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+    }
+</style>
